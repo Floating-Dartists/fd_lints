@@ -1,5 +1,5 @@
 ##
-# Common lint rules used in both Dart projects.
+# Common lint rules used in Dart and Flutter projects.
 # Rules defined as warnings here is because of performance reasons.
 # The ones that are errors are the ones that are more likely to cause bugs.
 ##
@@ -7,6 +7,10 @@
 analyzer:
   language:
     strict-casts: true
+  exclude:
+    - lib/**.g.dart
+    - lib/**.freezed.dart
+    - test/**.mocks.dart
   errors:
     collection_methods_unrelated_type: error
     iterable_contains_unrelated_type: error
@@ -21,7 +25,11 @@ analyzer:
     prefer_null_aware_operators: error
     prefer_typing_uninitialized_variables: error
     recursive_getters: error
+    tighten_type_of_initializing_formals: error
+    type_annotate_public_apis: error
     missing_required_param: error
+    missing_return: error
+    invalid_use_of_visible_for_testing_member: error
     cancel_subscriptions: warning
     close_sinks: warning
     hash_and_equals: warning
@@ -41,6 +49,9 @@ analyzer:
     prefer_for_elements_to_map_fromIterable: warning
     prefer_is_empty: warning
     prefer_is_not_empty: warning
+    unawaited_futures: warning
+    use_enums: warning
+    use_string_buffers: warning
 
 linter:
   rules:
@@ -159,3 +170,41 @@ linter:
     - slash_for_doc_comments
     - sort_constructors_first
     - sort_unnamed_constructors_first
+    - tighten_type_of_initializing_formals
+    - type_annotate_public_apis
+    - type_init_formals
+    - unawaited_futures
+    - unnecessary_await_in_return
+    - unnecessary_brace_in_string_interps
+    # - unnecessary_breaks # Not recognized for now
+    - unnecessary_const
+    - unnecessary_constructor_name
+    - unnecessary_getters_setters
+    - unnecessary_lambdas
+    - unnecessary_late
+    - unnecessary_new
+    - unnecessary_null_aware_assignments
+    - unnecessary_null_aware_operator_on_extension_on_nullable
+    - unnecessary_null_checks
+    - unnecessary_null_in_if_null_operators
+    - unnecessary_nullable_for_final_variable_declarations
+    - unnecessary_overrides
+    - unnecessary_parenthesis
+    - unnecessary_raw_strings
+    - unnecessary_string_escapes
+    - unnecessary_string_interpolations
+    - unnecessary_this
+    - unnecessary_to_list_in_spreads
+    - use_enums
+    - use_function_type_syntax_for_parameters
+    - use_if_null_to_convert_nulls_to_bools
+    - use_is_even_rather_than_modulo
+    - use_late_for_private_fields_and_variables
+    - use_named_constants
+    - use_rethrow_when_possible
+    - use_setters_to_change_properties
+    - use_string_buffers
+    - use_string_in_part_of_directives
+    - use_super_parameters
+    - use_test_throws_matchers
+    - void_checks
