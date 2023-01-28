@@ -10,7 +10,7 @@ An opiniated set of lint rules for Dart and Flutter projects. Made by yours trul
 
 You can use 2 different sets of rules:
 
-* `analysis_options`: for Dart projects
+* `dart`: for Dart projects
 * `flutter`: for Flutter projects (includes `analysis_options` rules)
 
 ## Install
@@ -25,6 +25,6 @@ dev_dependencies:
 Creates an `analysis_options.yaml` file in the root of your project and add the following content:
 
 ```yaml
-include: package:fd_lints/analysis_options.yaml # For Dart projects
+include: package:fd_lints/dart.yaml # For Dart projects
 # include: package:fd_lints/flutter.yaml # For Flutter projects
 ```

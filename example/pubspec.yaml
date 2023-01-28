@@ -1,0 +1,12 @@
+name: example
+description: Example of using fd_lints
+version: 1.0.0
+repository: https://github.com/Floating-Dartists/fd_lints
+issue_tracker: https://github.com/Floating-Dartists/fd_lints/issues
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dev_dependencies:
+  fd_lints:
+    path: ../
