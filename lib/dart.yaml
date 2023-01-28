@@ -1,5 +1,0 @@
-##
-# Lint rules to be used for Dart projects.
-##
-
-include: package:fd_lints/analysis_options.yaml
