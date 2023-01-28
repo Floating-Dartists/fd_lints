@@ -1,0 +1,9 @@
+##
+# Common lint rules used in both Dart and Flutter projects.
+##
+
+analyzer:
+  language:
+    strict-casts: true
+  errors:
+    missing_required_param: error

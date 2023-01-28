@@ -1,0 +1,9 @@
+##
+# Lint rules to be used for Flutter projects.
+##
+
+include: package:fd_lints/analysis_options.yaml
+
+linter:
+  rules:
+    - avoid_unnecessary_containers

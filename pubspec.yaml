@@ -1,14 +1,7 @@
 name: fd_lints
-description: A starting point for Dart libraries or applications.
+description: An opiniated set of lint rules for Dart and Flutter projects. Made by yours truly Floating Dartists.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/Floating-Dartists/fd_lints
 
 environment:
-  sdk: '>=2.19.0 <3.0.0'
-
-# dependencies:
-#   path: ^1.8.0
-
-dev_dependencies:
-  lints: ^2.0.0
-  test: ^1.21.0
+  sdk: ">=2.18.0 <3.0.0"
