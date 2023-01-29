@@ -63,29 +63,29 @@ The following files are excluded by default:
 | avoid_relative_lib_imports        | :information_source: |
 | avoid_slow_async_io               | :warning:            |
 | avoid_types_as_parameter_names    | :information_source: |
-| cancel_subscriptions              | :information_source: |
-| close_sinks                       | :information_source: |
-| collection_methods_unrelated_type | :information_source: |
+| cancel_subscriptions              | :warning:            |
+| close_sinks                       | :warning:            |
+| collection_methods_unrelated_type | :x:                  |
 | empty_statements                  | :information_source: |
-| hash_and_equals                   | :information_source: |
-| iterable_contains_unrelated_type  | :information_source: |
-| list_remove_unrelated_type        |                      |
-| literal_only_boolean_expressions  |                      |
-| no_duplicate_case_values          |                      |
-| prefer_void_to_null               |                      |
-| test_types_in_equals              |                      |
-| unnecessary_statements            |                      |
-| unrelated_type_equality_checks    |                      |
-| valid_regexps                     |                      |
-| always_declare_return_types       |                      |
-| annotate_overrides                |                      |
-| avoid_annotating_with_dynamic     |                      |
-| avoid_bool_literals_in_conditional_expressions |                      |
-| avoid_catching_errors             |                      |
-| avoid_classes_with_only_static_members |                      |
+| hash_and_equals                   | :warning:            |
+| iterable_contains_unrelated_type  | :x:                  |
+| list_remove_unrelated_type        | :x:                  |
+| literal_only_boolean_expressions  | :information_source: |
+| no_duplicate_case_values          | :information_source: |
+| prefer_void_to_null               | :information_source: |
+| test_types_in_equals              | :warning:            |
+| unnecessary_statements            | :information_source: |
+| unrelated_type_equality_checks    | :x:                  |
+| valid_regexps                     | :information_source: |
+| always_declare_return_types       | :information_source: |
+| annotate_overrides                | :information_source: |
+| avoid_annotating_with_dynamic     | :warning:            |
+| avoid_bool_literals_in_conditional_expressions | :information_source: |
+| avoid_catching_errors             | :warning:            |
+| avoid_classes_with_only_static_members | :information_source: |
 
-:construction_worker: Work in progress
+:construction_worker: Work in progress :construction_worker:
 
 ## Flutter
 
-:construction_worker: Work in progress
+:construction_worker: Work in progress :construction_worker:
