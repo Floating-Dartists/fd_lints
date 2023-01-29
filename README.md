@@ -53,7 +53,7 @@ The following files are excluded by default:
 * :warning: : warning
 * :x: : error
 
-## Dart
+### Dart
 
 | **Rule**                          | **Severity**         |
 |-----------------------------------|----------------------|
@@ -86,6 +86,6 @@ The following files are excluded by default:
 
 :construction_worker: Work in progress :construction_worker:
 
-## Flutter
+### Flutter
 
 :construction_worker: Work in progress :construction_worker:
