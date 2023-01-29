@@ -29,11 +29,31 @@ include: package:fd_lints/dart.yaml # For Dart projects
 # include: package:fd_lints/flutter.yaml # For Flutter projects
 ```
 
-## Enabled rules
+## Analyzer
+
+### Language
+
+Stricter type check is enabled by default. Applying the following rules:
+
+* `strict-casts`
+* `strict-inference`
+* `strict-raw-types`
+
+### Exclude
+
+The following files are excluded by default:
+
+* `lib/**.g.dart`
+* `lib/**.freezed.dart`
+* `test/**.mocks.dart`
+
+## Linter rules
 
 * :information_source: : info
 * :warning: : warning
 * :x: : error
+
+## Dart
 
 | **Rule**                          | **Severity**         |
 |-----------------------------------|----------------------|
@@ -49,40 +69,23 @@ include: package:fd_lints/dart.yaml # For Dart projects
 | empty_statements                  | :information_source: |
 | hash_and_equals                   | :information_source: |
 | iterable_contains_unrelated_type  | :information_source: |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
-|                                   |                      |
+| list_remove_unrelated_type        |                      |
+| literal_only_boolean_expressions  |                      |
+| no_duplicate_case_values          |                      |
+| prefer_void_to_null               |                      |
+| test_types_in_equals              |                      |
+| unnecessary_statements            |                      |
+| unrelated_type_equality_checks    |                      |
+| valid_regexps                     |                      |
+| always_declare_return_types       |                      |
+| annotate_overrides                |                      |
+| avoid_annotating_with_dynamic     |                      |
+| avoid_bool_literals_in_conditional_expressions |                      |
+| avoid_catching_errors             |                      |
+| avoid_classes_with_only_static_members |                      |
+
+:construction_worker: Work in progress
+
+## Flutter
+
+:construction_worker: Work in progress
