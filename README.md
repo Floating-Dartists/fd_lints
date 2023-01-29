@@ -11,7 +11,7 @@ An opiniated set of lint rules for Dart and Flutter projects. Made by yours trul
 You can use 2 different sets of rules:
 
 * `dart`: for Dart projects
-* `flutter`: for Flutter projects (includes `analysis_options` rules)
+* `flutter`: for Flutter projects (includes `dart` rules)
 
 ## Install
 
