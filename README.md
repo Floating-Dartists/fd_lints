@@ -28,3 +28,61 @@ Creates an `analysis_options.yaml` file in the root of your project and add the 
 include: package:fd_lints/dart.yaml # For Dart projects
 # include: package:fd_lints/flutter.yaml # For Flutter projects
 ```
+
+## Enabled rules
+
+* :information_source: : info
+* :warning: : warning
+* :x: : error
+
+| **Rule**                          | **Severity**         |
+|-----------------------------------|----------------------|
+| always_use_package_imports        | :information_source: |
+| avoid_dynamic_calls               | :information_source: |
+| avoid_empty_else                  | :information_source: |
+| avoid_relative_lib_imports        | :information_source: |
+| avoid_slow_async_io               | :warning:            |
+| avoid_types_as_parameter_names    | :information_source: |
+| cancel_subscriptions              | :information_source: |
+| close_sinks                       | :information_source: |
+| collection_methods_unrelated_type | :information_source: |
+| empty_statements                  | :information_source: |
+| hash_and_equals                   | :information_source: |
+| iterable_contains_unrelated_type  | :information_source: |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |
+|                                   |                      |

@@ -54,6 +54,7 @@ analyzer:
     unawaited_futures: warning
     use_enums: warning
     use_string_buffers: warning
+    avoid_slow_async_io: warning
 
 linter:
   rules:
