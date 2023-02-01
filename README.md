@@ -222,7 +222,7 @@ The following files are excluded by default:
 | avoid_web_libraries_in_flutter             | :information_source: |
 | avoid_unnecessary_containers               | :information_source: |
 | no_logic_in_create_state                   | :information_source: |
-| use_build_context_synchronously            | :warning:            |
+| use_build_context_synchronously            | :x:                  |
 | use_key_in_widget_constructors             | :information_source: |
 | avoid_function_literals_in_foreach_calls   | :information_source: |
 | avoid_js_rounded_ints                      | :warning:            |
