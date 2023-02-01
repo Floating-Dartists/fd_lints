@@ -83,9 +83,15 @@ The following files are excluded by default:
 | avoid_bool_literals_in_conditional_expressions | :information_source: |
 | avoid_catching_errors             | :warning:            |
 | avoid_classes_with_only_static_members | :information_source: |
+| avoid_double_and_int_checks       | :information_source: |
+| avoid_equals_and_hash_code_on_mutable_classes | :information_source: |
+| avoid_escaping_inner_quotes       | :information_source: |
+| avoid_field_initializers_in_const_classes | :information_source: |
+| avoid_final_parameters            | :information_source: |
+| avoid_init_to_null                | :information_source: |
 
-:construction_worker: Work in progress :construction_worker:
+:construction_worker: Section in construction :construction_worker:
 
 ### Flutter
 
-:construction_worker: Work in progress :construction_worker:
+:construction_worker: Section in construction :construction_worker:
