@@ -65,6 +65,7 @@ The following files are excluded by default:
 | avoid_types_as_parameter_names    | :information_source: |
 | cancel_subscriptions              | :warning:            |
 | close_sinks                       | :warning:            |
+| control_flow_in_finally           | :information_source: |
 | collection_methods_unrelated_type | :x:                  |
 | empty_statements                  | :information_source: |
 | hash_and_equals                   | :warning:            |
@@ -94,4 +95,21 @@ The following files are excluded by default:
 
 ### Flutter
 
-:construction_worker: Section in construction :construction_worker:
+| **Rule**                          | **Severity**         |
+|-----------------------------------|----------------------|
+| avoid_print                       | :information_source: |
+| avoid_web_libraries_in_flutter    | :information_source: |
+| avoid_unnecessary_containers      | :information_source: |
+| no_logic_in_create_state          | :information_source: |
+| use_build_context_synchronously   | :warning:            |
+| use_key_in_widget_constructors    | :information_source: |
+| avoid_function_literals_in_foreach_calls | :information_source: |
+| avoid_js_rounded_ints             | :warning:            |
+| sized_box_for_whitespace          | :information_source: |
+| sized_box_shrink_expand           | :information_source: |
+| sort_child_properties_last        | :information_source: |
+| use_colored_box                   | :information_source: |
+| use_decorated_box                 | :information_source: |
+| use_full_hex_values_for_flutter_colors | :warning:       |
+| prefer_const_constructors_in_immutables | :information_source: |
+| prefer_const_literals_to_create_immutables | :information_source: |
