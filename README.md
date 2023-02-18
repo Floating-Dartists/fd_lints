@@ -6,6 +6,8 @@
   </a>
 </p>
 
+[![Pub Version](https://img.shields.io/pub/v/fd_lints)](https://pub.dev/packages/fd_lints)
+
 An opiniated set of lint rules for Dart and Flutter projects. Made by yours truly Floating Dartists.
 
 You can use 2 different sets of rules:
