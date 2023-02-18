@@ -144,7 +144,6 @@ The following files are excluded by default:
 | prefer_const_declarations                                | :information_source: |
 | prefer_constructors_over_static_methods                  | :information_source: |
 | prefer_contains                                          | :warning:            |
-| prefer_expression_function_bodies                        | :information_source: |
 | prefer_final_fields                                      | :information_source: |
 | prefer_final_in_for_each                                 | :information_source: |
 | prefer_final_locals                                      | :information_source: |
