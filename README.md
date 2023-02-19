@@ -133,7 +133,6 @@ The following files are excluded by default:
 | noop_primitive_operations                                | :information_source: |
 | null_check_on_nullable_type_parameter                    | :x:                  |
 | null_closures                                            | :x:                  |
-| omit_local_variable_types                                | :information_source: |
 | only_throw_errors                                        | :warning:            |
 | overridden_fields                                        | :information_source: |
 | package_prefixed_library_names                           | :information_source: |
