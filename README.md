@@ -178,6 +178,7 @@ The following files are excluded by default:
 | unawaited_futures                                        | :warning:            |
 | unnecessary_await_in_return                              | :information_source: |
 | unnecessary_brace_in_string_interps                      | :information_source: |
+| unnecessary_breaks                                       | :information_source: |
 | unnecessary_const                                        | :information_source: |
 | unnecessary_constructor_name                             | :information_source: |
 | unnecessary_getters_setters                              | :information_source: |
