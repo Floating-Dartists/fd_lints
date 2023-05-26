@@ -21,7 +21,7 @@ Add the version you want to your `pubspec.yaml`:
 
 ```yaml
 dev_dependencies:
-  fd_lints: ^1.0.0
+  fd_lints: any
 ```
 
 Creates an `analysis_options.yaml` file in the root of your project and add the following content:
@@ -213,6 +213,7 @@ The following files are excluded by default:
 | invalid_use_of_visible_for_testing_member                | :x:                  |
 | missing_return                                           | :x:                  |
 | missing_required_param                                   | :x:                  |
+| invalid_annotation_target                                | _ignored_            |
 
 
 ### Flutter
