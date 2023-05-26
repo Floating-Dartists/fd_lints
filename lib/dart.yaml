@@ -55,6 +55,7 @@ analyzer:
     use_enums: warning
     use_string_buffers: warning
     avoid_slow_async_io: warning
+    invalid_annotation_target: ignore
 
 linter:
   rules:
