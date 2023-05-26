@@ -1,3 +1,7 @@
+## 1.1.1
+
+* Added rule invalid_annotation_target as ignored
+
 ## 1.1.0
 
 * Updated Dart SDK constraints to: `">=2.18.0 <4.0.0"`
