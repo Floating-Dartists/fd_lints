@@ -12,3 +12,6 @@ dependencies:
   analyzer: ^5.12.0
   analyzer_plugin: ^0.11.2
   custom_lint_builder: ^0.4.0
+
+dev_dependencies:
+  lints: ^2.1.1
