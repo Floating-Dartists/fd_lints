@@ -2,12 +2,12 @@ import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
-class AvoidNonNullAssertion extends DartLintRule {
-  AvoidNonNullAssertion() : super(code: _code);
+class AvoidAs extends DartLintRule {
+  AvoidAs() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'avoid_non_null_assertion',
-    problemMessage: 'Avoid using the "bang" operator (!).',
+    name: 'avoid_as',
+    problemMessage: 'Avoid using the "as" operator.',
     errorSeverity: ErrorSeverity.WARNING,
   );
 
@@ -17,10 +17,8 @@ class AvoidNonNullAssertion extends DartLintRule {
     ErrorReporter reporter,
     CustomLintContext context,
   ) {
-    context.registry.addPostfixExpression((node) {
-      if (node.operator.lexeme == '!') {
-        reporter.reportErrorForNode(code, node);
-      }
+    context.registry.addAsExpression((node) {
+      reporter.reportErrorForNode(code, node);
     });
   }
 }
