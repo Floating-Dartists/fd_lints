@@ -1,6 +1,9 @@
-## 1.x.x
+## 2.0.0
 
 * Added rule [flutter_style_todos](https://dart-lang.github.io/linter/lints/flutter_style_todos.html)
+* Created custom rules with the package [custom_lint](https://pub.dev/packages/custom_lint)
+    * `avoid_as`: Avoid using `as` keyword :warning:
+    * `avoid_non_null_assertion`: Avoid using `!` operator :warning:
 
 ## 1.1.1
 

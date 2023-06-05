@@ -15,20 +15,25 @@ You can use 2 different sets of rules:
 * `dart`: for Dart projects
 * `flutter`: for Flutter projects (includes `dart` rules)
 
-## Install
+## Installing fd_lints
 
-Add the version you want to your `pubspec.yaml`:
+* Add both fd_lints and custom_lint to your `pubspec.yaml` file:
 
 ```yaml
 dev_dependencies:
-  fd_lints: any
+  custom_lint:
+  fd_lints:
 ```
 
-Creates an `analysis_options.yaml` file in the root of your project and add the following content:
+* Include the set of rules you want to use and enable `custom_lint`'s plugin in your `analysis_options.yaml` file:
 
 ```yaml
-include: package:fd_lints/dart.yaml # For Dart projects
-# include: package:fd_lints/flutter.yaml # For Flutter projects
+include: package:fd_lints/dart.yaml # Recommended for Dart projects
+# include: package:fd_lints/flutter.yaml # Recommended for Flutter projects
+
+analyzer:
+  plugins:
+    - custom_lint
 ```
 
 ## Analyzer
@@ -54,6 +59,15 @@ The following files are excluded by default:
 * :information_source: : info
 * :warning: : warning
 * :x: : error
+
+### Custom
+
+Those rules were created by us by using the [custom_lint](https://pub.dev/packages/custom_lint) package.
+
+| **Rule**                                                 | **Severity**         |
+|----------------------------------------------------------|----------------------|
+| avoid_non_null_assertion                                 | :warning:            |
+| avoid_as                                                 | :warning:            |
 
 ### Dart
 
