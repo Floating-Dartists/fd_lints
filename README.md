@@ -236,3 +236,4 @@ The following files are excluded by default:
 | use_full_hex_values_for_flutter_colors     | :warning:            |
 | prefer_const_constructors_in_immutables    | :information_source: |
 | prefer_const_literals_to_create_immutables | :information_source: |
+| flutter_style_todos                        | :information_source: |

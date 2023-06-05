@@ -31,3 +31,4 @@ linter:
     - use_full_hex_values_for_flutter_colors
     - prefer_const_constructors_in_immutables
     - prefer_const_literals_to_create_immutables
+    - flutter_style_todos
