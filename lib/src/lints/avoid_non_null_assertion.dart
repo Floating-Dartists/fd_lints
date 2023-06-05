@@ -2,6 +2,7 @@ import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
+/// {@template avoid_non_null_assertion}
 /// A lint that reports the use of the "bang" operator (!).
 ///
 /// **BAD:**
@@ -32,7 +33,9 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 ///   }
 /// }
 /// ```
+/// {@endtemplate}
 class AvoidNonNullAssertion extends DartLintRule {
+  /// {@macro avoid_non_null_assertion}
   AvoidNonNullAssertion() : super(code: _code);
 
   static const _code = LintCode(
