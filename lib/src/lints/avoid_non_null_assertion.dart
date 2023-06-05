@@ -14,8 +14,22 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 /// **GOOD:**
 /// ```dart
 /// void foo(String? bar) {
-///   if (bar == null) throw NullThrownError();
+///   if (bar == null) throw ArgumentError.notNull('bar');
 ///   print(bar.length);
+/// }
+/// ```
+/// or
+/// ```dart
+/// void foo(String? bar) {
+///   print(bar?.length);
+/// }
+/// ```
+/// or
+/// ```dart
+/// void foo(String? bar) {
+///   if (bar case final bar?) {
+///     print(bar.length);
+///   }
 /// }
 /// ```
 class AvoidNonNullAssertion extends DartLintRule {
