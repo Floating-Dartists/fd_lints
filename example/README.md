@@ -16,4 +16,8 @@ dev_dependencies:
 
 ```yaml
 include: package:fd_lints/dart.yaml
+
+analyzer:
+  plugins:
+    - custom_lint
 ```
