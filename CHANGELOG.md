@@ -1,3 +1,7 @@
+## 1.x.x
+
+* Added rule [flutter_style_todos](https://dart-lang.github.io/linter/lints/flutter_style_todos.html)
+
 ## 1.1.1
 
 * Added rule invalid_annotation_target as ignored

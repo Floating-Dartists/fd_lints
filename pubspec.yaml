@@ -1,8 +1,14 @@
 name: fd_lints
-description: An opiniated set of lint rules for Dart and Flutter projects. Made by yours truly Floating Dartists.
+description: An opiniated set of lint rules for Dart and Flutter projects. Made
+  by yours truly Floating Dartists.
 version: 1.1.1
 repository: https://github.com/Floating-Dartists/fd_lints
 issue_tracker: https://github.com/Floating-Dartists/fd_lints/issues
 
 environment:
   sdk: ">=2.18.0 <4.0.0"
+
+dependencies:
+  analyzer: ^5.12.0
+  analyzer_plugin: ^0.11.2
+  custom_lint_builder: ^0.4.0
