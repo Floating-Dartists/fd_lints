@@ -19,13 +19,15 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 ///   print(bar.length);
 /// }
 /// ```
-/// or
+///
+/// **GOOD:**
 /// ```dart
 /// void foo(String? bar) {
 ///   print(bar?.length);
 /// }
 /// ```
-/// or
+///
+/// **GOOD:**
 /// ```dart
 /// void foo(String? bar) {
 ///   if (bar case final bar?) {
@@ -42,6 +44,8 @@ class AvoidNonNullAssertion extends DartLintRule {
     name: 'avoid_non_null_assertion',
     problemMessage: 'Avoid using the non-null assertion operator (!).',
     correctionMessage: 'Use a null check operator or condition instead.',
+    url:
+        'https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_non_null_assertion.md',
     errorSeverity: ErrorSeverity.WARNING,
   );
 

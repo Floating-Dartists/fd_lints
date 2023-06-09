@@ -20,7 +20,8 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 ///   }
 /// }
 /// ```
-/// or
+///
+/// **GOOD:**
 /// ```dart
 /// void foo(Object bar) {
 ///   if (bar is! String) {
@@ -37,6 +38,9 @@ class AvoidAs extends DartLintRule {
   static const _code = LintCode(
     name: 'avoid_as',
     problemMessage: 'Avoid using the "as" operator.',
+    correctionMessage: 'Use "is", "is!" or pattern matching instead.',
+    url:
+        'https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_as.md',
     errorSeverity: ErrorSeverity.WARNING,
   );
 
