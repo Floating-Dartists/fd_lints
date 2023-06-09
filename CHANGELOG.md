@@ -1,3 +1,7 @@
+## 2.0.0+1
+
+* Updated documentation of custom rules
+
 ## 2.0.0
 
 * Added rule [flutter_style_todos](https://dart-lang.github.io/linter/lints/flutter_style_todos.html)

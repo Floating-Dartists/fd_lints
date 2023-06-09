@@ -64,10 +64,10 @@ The following files are excluded by default:
 
 Those rules were created by us by using the [custom_lint](https://pub.dev/packages/custom_lint) package.
 
-| **Rule**                                                 | **Severity**         |
-|----------------------------------------------------------|----------------------|
-| avoid_non_null_assertion                                 | :warning:            |
-| avoid_as                                                 | :warning:            |
+| **Rule**                                                  | **Severity**         |
+|-----------------------------------------------------------|----------------------|
+| [avoid_non_null_assertion][avoid_non_null_assertion_link] | :warning:            |
+| [avoid_as][avoid_as_link]                                 | :warning:            |
 
 ### Dart
 
@@ -251,3 +251,6 @@ Those rules were created by us by using the [custom_lint](https://pub.dev/packag
 | prefer_const_constructors_in_immutables    | :information_source: |
 | prefer_const_literals_to_create_immutables | :information_source: |
 | flutter_style_todos                        | :information_source: |
+
+[avoid_non_null_assertion_link]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_non_null_assertion.md
+[avoid_as_link]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_as.md
