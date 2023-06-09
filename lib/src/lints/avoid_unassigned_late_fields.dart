@@ -1,3 +1,4 @@
+import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
@@ -8,26 +9,44 @@ import 'package:fd_lints/src/utils/utils.dart';
 ///
 /// **BAD:**
 /// ```dart
-/// class LateClass {
-///  late final String foo = 'foo';
-///
-///  late final String bar; // LINT
+/// class Foo {
+///   late final int bar;
 /// }
 /// ```
 ///
 /// **GOOD:**
 /// ```dart
-/// class LateClass {
-///   LateClase() {
-///     bar = 'bar';
+/// class Foo {
+///   late final int bar;
+///
+///   Foo() {
+///     bar = 42;
 ///   }
-///
-///   late final String foo = 'foo';
-///
-///   late final String bar;
 /// }
 /// ```
+///
+/// **GOOD:**
+/// ```dart
+/// class Foo {
+///   late final int bar;
+///
+///   void baz() {
+///     bar = 42;
+///   }
+/// }
+/// ```
+///
+/// **GOOD:**
+/// ```dart
+/// class Foo {
+///   late final int bar;
+///
+///   Foo() : bar = 42;
+/// }
+/// ```
+/// {@endtemplate}
 class AvoidUnassignedLateFields extends DartLintRule {
+  /// {@macro avoid_unassigned_late_fields}
   AvoidUnassignedLateFields() : super(code: _code);
 
   static const _code = LintCode(
@@ -43,8 +62,36 @@ class AvoidUnassignedLateFields extends DartLintRule {
     CustomLintContext context,
   ) {
     context.registry.addFieldDeclaration((node) {
-      if (node.isLate && !node.isAssigned) {
-        reporter.reportErrorForNode(code, node);
+      if (node.isLate && !node.isAssignedOnDeclaration) {
+        final parent = node.parent;
+
+        if (parent is ClassDeclaration) {
+          final constructors =
+              parent.members.whereType<ConstructorDeclaration>();
+          for (final constructor in constructors) {
+            final initializer = constructor.initializers
+                .whereType<FieldFormalParameter>()
+                .where((e) => e.name == node.fields.variables.first.name)
+                .isNotEmpty;
+
+            final body = constructor.body
+                .toSource()
+                .contains('${node.fields.variables.first.name.lexeme} =');
+
+            if (initializer || body) return;
+          }
+
+          final methods = parent.members.whereType<MethodDeclaration>();
+          for (final method in methods) {
+            final body = method.body
+                .toSource()
+                .contains('${node.fields.variables.first.name.lexeme} =');
+
+            if (body) return;
+          }
+
+          reporter.reportErrorForNode(code, node);
+        }
       }
     });
   }

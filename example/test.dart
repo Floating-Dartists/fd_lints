@@ -17,3 +17,9 @@ class Test {
 class Test2 {
   late final String foo; // LINT
 }
+
+class Test3 {
+  late final String foo; // Ok because it's assigned in a method.
+
+  void baz() => foo = 'bar';
+}
