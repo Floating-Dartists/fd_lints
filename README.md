@@ -64,10 +64,11 @@ The following files are excluded by default:
 
 Those rules were created by us by using the [custom_lint](https://pub.dev/packages/custom_lint) package.
 
-| **Rule**                                                  | **Severity**         |
-|-----------------------------------------------------------|----------------------|
-| [avoid_non_null_assertion][avoid_non_null_assertion_link] | :warning:            |
-| [avoid_as][avoid_as_link]                                 | :warning:            |
+| **Rule**                                                          | **Severity**         |
+|-------------------------------------------------------------------|----------------------|
+| [avoid_non_null_assertion][avoid_non_null_assertion_link]         | :warning:            |
+| [avoid_as][avoid_as_link]                                         | :warning:            |
+| [avoid_unassigned_late_fields][avoid_unassigned_late_fields_link] | :warning:            |
 
 ### Dart
 
@@ -254,3 +255,4 @@ Those rules were created by us by using the [custom_lint](https://pub.dev/packag
 
 [avoid_non_null_assertion_link]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_non_null_assertion.md
 [avoid_as_link]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_as.md
+[avoid_unassigned_late_fields_link]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_unassigned_late_fields.md
