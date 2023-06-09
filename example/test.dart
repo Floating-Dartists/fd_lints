@@ -11,7 +11,7 @@ class Test {
     foo = 'bar';
   }
 
-  late final String foo; // Ok because it's assigned in the constructor.
+  late final String foo; // NO LINT: Because assigned in the constructor's body.
 }
 
 class Test2 {
@@ -19,7 +19,7 @@ class Test2 {
 }
 
 class Test3 {
-  late final String foo; // Ok because it's assigned in a method.
+  late final String foo; // NO LINT: Because assigned in a method.
 
   void baz() => foo = 'bar';
 }
@@ -28,5 +28,5 @@ class Test4 {
   Test4() : foo = 'bar';
 
   // TODO(TesteurManiak): lint is triggered here, but it shouldn't.
-  late final String foo; // Ok because it's assigned in the constructor.
+  late final String foo; // NO LINT: Because assigned in the constructor.
 }
