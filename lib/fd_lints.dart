@@ -8,8 +8,10 @@ class _FDLintsPlugin extends PluginBase {
   @override
   List<LintRule> getLintRules(CustomLintConfigs configs) {
     return [
-      AvoidNonNullAssertion(),
       AvoidAs(),
+      AvoidNonNullAssertion(),
+      // TODO(TesteurManiak): Uncomment this when the rule is fixed.
+      // AvoidUnassignedLateFields(),
     ];
   }
 }
