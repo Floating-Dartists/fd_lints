@@ -3,7 +3,7 @@ import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 /// {@template avoid_non_null_assertion}
-/// A lint that reports the use of the "bang" operator (!).
+/// A lint that reports the use of the non-null assertion operator (!).
 ///
 /// **BAD:**
 /// ```dart
@@ -40,7 +40,8 @@ class AvoidNonNullAssertion extends DartLintRule {
 
   static const _code = LintCode(
     name: 'avoid_non_null_assertion',
-    problemMessage: 'Avoid using the "bang" operator (!).',
+    problemMessage: 'Avoid using the non-null assertion operator (!).',
+    correctionMessage: 'Use a null check operator or condition instead.',
     errorSeverity: ErrorSeverity.WARNING,
   );
 
