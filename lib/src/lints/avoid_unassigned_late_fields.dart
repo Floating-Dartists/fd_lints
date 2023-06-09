@@ -67,6 +67,10 @@ class AvoidUnassignedLateFields extends DartLintRule {
         final parent = node.parent;
 
         if (parent is ClassDeclaration) {
+          final pattern = RegExp(
+            '${node.fields.variables.first.name.lexeme} =',
+          );
+
           final constructors =
               parent.members.whereType<ConstructorDeclaration>();
           for (final constructor in constructors) {
@@ -75,18 +79,14 @@ class AvoidUnassignedLateFields extends DartLintRule {
                 .where((e) => e.name == node.fields.variables.first.name)
                 .isNotEmpty;
 
-            final body = constructor.body
-                .toSource()
-                .contains('${node.fields.variables.first.name.lexeme} =');
+            final body = constructor.body.toSource().contains(pattern);
 
             if (initializer || body) return;
           }
 
           final methods = parent.members.whereType<MethodDeclaration>();
           for (final method in methods) {
-            final body = method.body
-                .toSource()
-                .contains('${node.fields.variables.first.name.lexeme} =');
+            final body = method.body.toSource().contains(pattern);
 
             if (body) return;
           }

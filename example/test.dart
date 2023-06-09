@@ -23,3 +23,10 @@ class Test3 {
 
   void baz() => foo = 'bar';
 }
+
+class Test4 {
+  Test4() : foo = 'bar';
+
+  // TODO(TesteurManiak): lint is triggered here, but it shouldn't.
+  late final String foo; // Ok because it's assigned in the constructor.
+}
