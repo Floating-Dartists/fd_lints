@@ -1,11 +1,3 @@
-void main() {
-  final test = Test();
-  print(test.foo);
-
-  final test2 = Test2();
-  print(test2.foo);
-}
-
 class Test {
   Test() {
     foo = 'bar';
@@ -27,6 +19,5 @@ class Test3 {
 class Test4 {
   Test4() : foo = 'bar';
 
-  // TODO(TesteurManiak): lint is triggered here, but it shouldn't.
   late final String foo; // NO LINT: Because assigned in the constructor.
 }
