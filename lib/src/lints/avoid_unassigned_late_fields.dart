@@ -5,7 +5,8 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:fd_lints/src/utils/utils.dart';
 
 /// {@template avoid_unassigned_late_fields}
-/// Warns when a late field is not assigned a value.
+/// Warns when a late field is not assigned a value inside their class's
+/// constructor or methods.
 ///
 /// **BAD:**
 /// ```dart
@@ -51,7 +52,7 @@ class AvoidUnassignedLateFields extends DartLintRule {
 
   static const _code = LintCode(
     name: 'avoid_unassigned_late_fields',
-    problemMessage: 'Avoid unassigned late fields.',
+    problemMessage: 'Avoid unassigned late fields inside classes.',
     errorSeverity: ErrorSeverity.WARNING,
   );
 
