@@ -9,7 +9,7 @@ environment:
   sdk: ">=2.18.0 <3.0.0"
 
 dev_dependencies:
-  fd_lints: ^1.0.0
+  fd_lints: ^2.0.1
 ```
 
 ## analysis_options.yaml
