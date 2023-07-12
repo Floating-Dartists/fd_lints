@@ -68,7 +68,6 @@ Those rules were created by us by using the [custom_lint](https://pub.dev/packag
 |-------------------------------------------------------------------|----------------------|
 | [avoid_non_null_assertion][avoid_non_null_assertion_link]         | :warning:            |
 | [avoid_as][avoid_as_link]                                         | :warning:            |
-| [avoid_unassigned_late_fields][avoid_unassigned_late_fields_link] | :warning:            |
 
 ### Dart
 

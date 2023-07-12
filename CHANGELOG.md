@@ -1,9 +1,7 @@
 ## 2.1.0
 
 * Updated documentation of the package
-* Upgraded dependencies
-* Created custom rule
-    * `avoid_unassigned_late_fields`: Avoid unassigned late fields in class :warning:
+* Upgraded [`custom_lint`][custom_lint] `0.4.0`->`0.5.0`
 
 ## 2.0.1
 
@@ -12,7 +10,7 @@
 ## 2.0.0
 
 * Added rule [flutter_style_todos](https://dart-lang.github.io/linter/lints/flutter_style_todos.html)
-* Created custom rules with the package [custom_lint](https://pub.dev/packages/custom_lint)
+* Created custom rules with the package [custom_lint][custom_lint]
     * `avoid_as`: Avoid using `as` keyword :warning:
     * `avoid_non_null_assertion`: Avoid using `!` operator :warning:
 
@@ -36,3 +34,5 @@
 ## 1.0.0
 
 * Initial version.
+
+[custom_lint]: https://pub.dev/packages/custom_lint
