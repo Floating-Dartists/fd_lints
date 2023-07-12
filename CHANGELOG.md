@@ -1,6 +1,7 @@
 ## 2.1.0
 
 * Updated documentation of the package
+* Upgraded dependencies
 * Created custom rule
     * `avoid_unassigned_late_fields`: Avoid unassigned late fields in class :warning:
 
