@@ -15,8 +15,6 @@ analyzer:
     - test/**.mocks.dart
   errors:
     collection_methods_unrelated_type: error
-    iterable_contains_unrelated_type: error
-    list_remove_unrelated_type: error
     unrelated_type_equality_checks: error
     await_only_futures: error
     cast_nullable_to_non_nullable: error
@@ -72,8 +70,6 @@ linter:
     - collection_methods_unrelated_type
     - empty_statements
     - hash_and_equals
-    - iterable_contains_unrelated_type
-    - list_remove_unrelated_type
     - literal_only_boolean_expressions
     - no_duplicate_case_values
     - prefer_void_to_null

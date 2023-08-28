@@ -85,8 +85,6 @@ Those rules were created by us by using the [custom_lint](https://pub.dev/packag
 | collection_methods_unrelated_type                        | :x:                  |
 | empty_statements                                         | :information_source: |
 | hash_and_equals                                          | :warning:            |
-| iterable_contains_unrelated_type                         | :x:                  |
-| list_remove_unrelated_type                               | :x:                  |
 | literal_only_boolean_expressions                         | :information_source: |
 | no_duplicate_case_values                                 | :information_source: |
 | prefer_void_to_null                                      | :information_source: |
