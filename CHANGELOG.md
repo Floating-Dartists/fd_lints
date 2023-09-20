@@ -1,3 +1,8 @@
+## 2.2.0
+
+* Updated `analyzer` dependency constraints to `">=5.12.0 <7.0.0"`
+* Updated `custom_lint_builder` dependency constraints to `">=0.5.2 <0.6.0"`
+
 ## 2.1.0
 
 * Updated documentation of the package
