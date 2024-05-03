@@ -1,3 +1,7 @@
+## 2.2.1
+
+* Bump dependencies
+
 ## 2.2.0
 
 * Updated `analyzer` dependency constraints to `">=5.12.0 <7.0.0"`
