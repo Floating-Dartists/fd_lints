@@ -1,3 +1,8 @@
+## 2.3.0
+
+* Bump dependencies
+* Added rule [use_const_on_env_constructors](https://github.com/Floating-Dartists/fd_lints/blob/main/doc/use_const_on_env_constructors.md)
+
 ## 2.2.1
 
 * Bump dependencies
