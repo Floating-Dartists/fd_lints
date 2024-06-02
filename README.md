@@ -66,10 +66,11 @@ The following files are excluded by default:
 
 Those rules were created by us by using the [custom_lint](https://pub.dev/packages/custom_lint) package.
 
-| **Rule**                                                          | **Severity**         |
-|-------------------------------------------------------------------|----------------------|
-| [avoid_non_null_assertion][avoid_non_null_assertion_link]         | :warning:            |
-| [avoid_as][avoid_as_link]                                         | :warning:            |
+| **Rule**                                                              | **Severity**         |
+|-----------------------------------------------------------------------|----------------------|
+| [avoid_non_null_assertion][avoid_non_null_assertion_link]             | :warning:            |
+| [avoid_as][avoid_as_link]                                             | :warning:            |
+| [use_const_on_env_constructors](doc/use_const_on_env_constructors.md) | :x:                  |
 
 ### Dart
 

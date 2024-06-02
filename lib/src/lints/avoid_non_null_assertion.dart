@@ -57,7 +57,7 @@ class AvoidNonNullAssertion extends DartLintRule {
   ) {
     context.registry.addPostfixExpression((node) {
       if (node.operator.lexeme == '!') {
-        reporter.reportErrorForNode(code, node);
+        reporter.atNode(node, code);
       }
     });
   }
