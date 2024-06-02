@@ -45,3 +45,4 @@ analyzer:
 custom_lint:
     rules:
         - avoid_non_null_assertion: false
+```
