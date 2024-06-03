@@ -1,0 +1,28 @@
+@import "theme";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    background: $primary;
+}
+
+#footer {
+    margin-top: 48px;
+
+    background: $primaryLight;
+
+    padding: 1.5em;
+
+    color: #5E666B;
+    text-align: center;
+
+    a {
+        color: $accent;
+
+        &:hover {
+            color: $accentLight;
+        }
+    }
+}

@@ -1,6 +1,0 @@
-layout: layouts/rules.jinja
-docs_menu:
-  - title: avoid_as
-    id: avoid_as
-  - title: avoid_non_null_assertion
-    id: avoid_non_null_assertion
