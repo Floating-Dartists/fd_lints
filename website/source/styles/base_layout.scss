@@ -8,6 +8,27 @@ body {
     background: $primary;
 }
 
+.navbar {
+    background: $primary;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    font-size: 16px;
+    line-height: 1em;
+
+    .navbar-brand {
+        .name {
+            padding-left: 16px;
+
+            color: $accent;
+            font-size: 18px;
+        }
+    }
+
+    .nav-link.active {
+        color: WHITE;
+    }
+}
+
 #footer {
     margin-top: 48px;
 

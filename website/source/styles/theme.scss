@@ -3,5 +3,46 @@
 $primary : #151B1F;
 $primaryLight : #1B2227;
 
-$accent : #FFE500;
-$accentLight : #FFFF33;
+$accent : #40c4ff;
+$accentLight : #80d8ff;
+
+$defaultTextColor: WHITE;
+$inlineCode : $accent;
+
+@font-face {
+    font-family: marketFresh;
+    src: url(/fonts/market-fresh/Market-Fresh.ttf);
+}
+
+@font-face {
+    font-family: marketFresh;
+    font-weight: bold;
+    src: url(/fonts/market-fresh/Market-Fresh-Bold.ttf);
+}
+
+html,
+body {
+    color: $defaultTextColor;
+
+    font-size: 20px;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+.accent-text {
+    color: $accent;
+}
+
+p+h2 {
+    margin-top: 48px;
+}
+
+code {
+    color: $inlineCode;
+}
+
+pre>code {
+    margin: 8px 0;
+}
