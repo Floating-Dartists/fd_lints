@@ -39,7 +39,7 @@ class UseConstOnEnvConstructors extends DartLintRule {
     context.registry.addInstanceCreationExpression((node) {
       if (node.constructorName.name?.name == 'fromEnvironment' &&
           !node.isConst) {
-        reporter.atNode(node, code);
+        reporter.reportErrorForNode(code, node);
       }
     });
   }

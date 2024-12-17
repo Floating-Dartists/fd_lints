@@ -51,7 +51,7 @@ class AvoidAs extends DartLintRule {
     CustomLintContext context,
   ) {
     context.registry.addAsExpression((node) {
-      reporter.atNode(node, code);
+      reporter.reportErrorForNode(code, node);
     });
   }
 }
