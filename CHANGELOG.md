@@ -1,3 +1,7 @@
+## 2.3.1
+
+* Bump `analyzer` dependency to: `">=6.0.0 <7.0.0"`
+
 ## 2.3.0
 
 * Bump dependencies
