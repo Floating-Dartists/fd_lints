@@ -1,10 +1,13 @@
 ## 2.4.0
 
+* chore(deps): bump custom_lint_builder, analyzer_plugin and analyzer by @dependabot in https://github.com/Floating-Dartists/fd_lints/pull/13
 * Fixed linting rules by hiding `LintCode` from `package:analyzer/error/error.dart`
 * Replaced deprecated usage of `reportErrorForNode` by `atNode` in custom rules
 * Added rules to core `dart.yaml` file:
     * `document_ignores`: Document ignore comments.
     * `unnecessary_underscores`: Unnecessary underscores can be removed.
+
+**Full Changelog**: https://github.com/Floating-Dartists/fd_lints/compare/2.3.1...2.4.0
 
 ## 2.3.1
 
