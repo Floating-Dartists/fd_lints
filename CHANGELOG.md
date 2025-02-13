@@ -1,3 +1,11 @@
+## 2.4.0
+
+* Fixed linting rules by hiding `LintCode` from `package:analyzer/error/error.dart`
+* Replaced deprecated usage of `reportErrorForNode` by `atNode` in custom rules
+* Added rules to core `dart.yaml` file:
+    * `document_ignores`: Document ignore comments.
+    * `unnecessary_underscores`: Unnecessary underscores can be removed.
+
 ## 2.3.1
 
 * Bump `analyzer` dependency to: `">=6.0.0 <7.0.0"`
