@@ -1,4 +1,4 @@
-import 'package:analyzer/error/error.dart';
+import 'package:analyzer/error/error.dart' hide LintCode;
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
@@ -39,7 +39,7 @@ class UseConstOnEnvConstructors extends DartLintRule {
     context.registry.addInstanceCreationExpression((node) {
       if (node.constructorName.name?.name == 'fromEnvironment' &&
           !node.isConst) {
-        reporter.reportErrorForNode(code, node);
+        reporter.atNode(node, code);
       }
     });
   }
