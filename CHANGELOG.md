@@ -1,3 +1,9 @@
+## 2.5.0
+
+* chore(deps): bump analyzer_plugin from 0.12.0 to 0.13.0 by @dependabot in https://github.com/Floating-Dartists/fd_lints/pull/14
+
+**Full Changelog**: https://github.com/Floating-Dartists/fd_lints/compare/2.4.0...2.5.0
+
 ## 2.4.0
 
 * chore(deps): bump custom_lint_builder, analyzer_plugin and analyzer by @dependabot in https://github.com/Floating-Dartists/fd_lints/pull/13
