@@ -1,4 +1,8 @@
 void main() {
-  const Object bar = 'Hello, world!';
-  print(bar as String);
+  String? bar;
+  foo(bar!);
+}
+
+void foo(String bar) {
+  print(bar);
 }

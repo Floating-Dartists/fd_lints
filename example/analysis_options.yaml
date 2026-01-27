@@ -1,6 +1,3 @@
-include: package:fd_lints/dart.yaml # For Dart projects
-# include: package:fd_lints/flutter.yaml # For Flutter projects
-
 plugins:
   fd_lints:
     path: ../
