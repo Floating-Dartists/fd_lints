@@ -14,7 +14,7 @@ An opiniated set of lint rules for Dart and Flutter projects. Made by yours trul
 
 fd_lints is implemented using [analysis_server_plugin]. As such, it is installed through `analysis_options.yaml`
 
-Long story short, create an `analysis_options.yaml` next to your `pubspec.yaml` and add:
+Create an `analysis_options.yaml` next to your `pubspec.yaml` and add:
 
 ```yaml
 plugins:
