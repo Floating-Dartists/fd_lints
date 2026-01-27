@@ -7,7 +7,19 @@ import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/error/error.dart';
 import 'package:fd_lints/src/utils/dart_type_extensions.dart';
 
+/// {@template do_not_mutate_unmodifiable_map_view}
+/// A lint that reports mutations on `UnmodifiableMapView` instances.
+///
+/// **BAD:**
+/// ```dart
+/// void foo() {
+///  var mapView = UnmodifiableMapView({'a': 1, 'b': 2});
+///  mapView['c'] = 3; // Throws
+/// }
+/// ```
+/// {@endtemplate}
 class DoNotMutateUnmodifiableMapView extends AnalysisRule {
+  /// {@macro do_not_mutate_unmodifiable_map_view}
   DoNotMutateUnmodifiableMapView()
       : super(
           name: _code.name,

@@ -8,13 +8,13 @@ import 'package:analyzer/error/error.dart';
 import 'package:fd_lints/src/utils/dart_type_extensions.dart';
 
 /// {@template do_not_mutate_unmodifiable_list_view}
-/// A lint that reports mutations on [UnmodifiableListView] instances.
+/// A lint that reports mutations on `UnmodifiableListView` instances.
 ///
 /// **BAD:**
 /// ```dart
 /// void foo() {
 ///   var listView = UnmodifiableListView([1, 2, 3]);
-///   listView.add(4); // Mutation
+///   listView.add(4); // Throws
 /// }
 /// ```
 /// {@endtemplate}

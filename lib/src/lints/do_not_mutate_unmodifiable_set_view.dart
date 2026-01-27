@@ -7,7 +7,19 @@ import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/error/error.dart';
 import 'package:fd_lints/src/utils/dart_type_extensions.dart';
 
+/// {@template do_not_mutate_unmodifiable_set_view}
+/// A lint that reports mutations on `UnmodifiableSetView` instances.
+///
+/// **BAD:**
+/// ```dart
+/// void foo() {
+///  var setView = UnmodifiableSetView({1, 2, 3});
+///  setView.add(4); // Throws
+/// }
+/// ```
+/// {@endtemplate}
 class DoNotMutateUnmodifiableSetView extends AnalysisRule {
+  /// {@macro do_not_mutate_unmodifiable_set_view}
   DoNotMutateUnmodifiableSetView()
       : super(
           name: _code.name,
