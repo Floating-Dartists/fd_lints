@@ -44,10 +44,12 @@ dart analyze
 
 | **Rule**                                                              | **Severity**         |
 |-----------------------------------------------------------------------|----------------------|
-| [avoid_non_null_assertion][avoid_non_null_assertion_link]             | :warning:            |
-| [avoid_as][avoid_as_link]                                             | :warning:            |
+| [avoid_non_null_assertion]                                            | :warning:            |
+| [avoid_as]                                                            | :warning:            |
+| [do_not_mutate_unmodifiable_list_view]                                | :error:              |
 
 
-[avoid_non_null_assertion_link]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_non_null_assertion.md
-[avoid_as_link]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_as.md
+[avoid_non_null_assertion]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_non_null_assertion.md
+[avoid_as]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_as.md
+[do_not_mutate_unmodifiable_list_view]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/do_not_mutate_unmodifiable_list_view.md
 [analysis_server_plugin]: https://pub.dev/packages/analysis_server_plugin

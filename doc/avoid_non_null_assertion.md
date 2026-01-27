@@ -32,17 +32,3 @@ void foo(String? bar) {
   }
 }
 ```
-
-## Usage
-
-To disable this lint in your project add this to your package's **analysis_options.yaml** file:
-
-```yaml
-analyzer:
-  plugins:
-    - custom_lint
-
-custom_lint:
-    rules:
-        - avoid_non_null_assertion: false
-```
