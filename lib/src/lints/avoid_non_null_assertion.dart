@@ -1,3 +1,10 @@
+import 'package:analyzer/analysis_rule/analysis_rule.dart';
+import 'package:analyzer/analysis_rule/rule_context.dart';
+import 'package:analyzer/analysis_rule/rule_visitor_registry.dart';
+import 'package:analyzer/dart/ast/ast.dart';
+import 'package:analyzer/dart/ast/visitor.dart';
+import 'package:analyzer/error/error.dart';
+
 /// {@template avoid_non_null_assertion}
 /// A lint that reports the use of the non-null assertion operator (!).
 ///
@@ -32,29 +39,41 @@
 /// }
 /// ```
 /// {@endtemplate}
-// class AvoidNonNullAssertion extends DartLintRule {
-//   /// {@macro avoid_non_null_assertion}
-//   AvoidNonNullAssertion() : super(code: _code);
+class AvoidNonNullAssertion extends AnalysisRule {
+  /// {@macro avoid_non_null_assertion}
+  AvoidNonNullAssertion()
+      : super(name: _code.name, description: _code.problemMessage);
 
-//   static const _code = LintCode(
-//     name: 'avoid_non_null_assertion',
-//     problemMessage: 'Avoid using the non-null assertion operator (!).',
-//     correctionMessage: 'Use a null check operator or condition instead.',
-//     url:
-//         'https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_non_null_assertion.md',
-//     errorSeverity: ErrorSeverity.WARNING,
-//   );
+  static const _code = LintCode(
+    'avoid_non_null_assertion',
+    'Avoid using the non-null assertion operator (!).',
+    correctionMessage: 'Use a null check operator or condition instead.',
+    severity: DiagnosticSeverity.WARNING,
+  );
 
-//   @override
-//   void run(
-//     CustomLintResolver resolver,
-//     ErrorReporter reporter,
-//     CustomLintContext context,
-//   ) {
-//     context.registry.addPostfixExpression((node) {
-//       if (node.operator.lexeme == '!') {
-//         reporter.atNode(node, code);
-//       }
-//     });
-//   }
-// }
+  @override
+  DiagnosticCode get diagnosticCode => _code;
+
+  @override
+  void registerNodeProcessors(
+    RuleVisitorRegistry registry,
+    RuleContext context,
+  ) {
+    final visitor = _Visitor(this, context);
+    registry.addPostfixExpression(this, visitor);
+  }
+}
+
+class _Visitor extends SimpleAstVisitor<void> {
+  _Visitor(this.rule, this.context);
+
+  final AvoidNonNullAssertion rule;
+  final RuleContext context;
+
+  @override
+  void visitPostfixExpression(PostfixExpression node) {
+    if (node.operator.lexeme == '!') {
+      rule.reportAtNode(node);
+    }
+  }
+}
