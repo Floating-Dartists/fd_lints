@@ -46,9 +46,9 @@ dart analyze
 |-----------------------------------------------------------------------|----------------------|
 | [avoid_non_null_assertion]                                            | :warning:            |
 | [avoid_as]                                                            | :warning:            |
-| [do_not_mutate_unmodifiable_list_view]                                | :error:              |
-| [do_not_mutate_unmodifiable_map_view]                                 | :error:              |
-| [do_not_mutate_unmodifiable_set_view]                                 | :error:              |
+| [do_not_mutate_unmodifiable_list_view]                                | :x:                  |
+| [do_not_mutate_unmodifiable_map_view]                                 | :x:                  |
+| [do_not_mutate_unmodifiable_set_view]                                 | :x:                  |
 
 
 [avoid_non_null_assertion]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_non_null_assertion.md
