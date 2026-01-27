@@ -10,11 +10,6 @@
 
 An opiniated set of lint rules for Dart and Flutter projects. Made by yours truly Floating Dartists.
 
-You can use 2 different sets of rules:
-
-* `dart`: for Dart projects
-* `flutter`: for Flutter projects (includes `dart` rules)
-
 ## Installing fd_lints
 
 fd_lints is implemented using [analysis_server_plugin]. As such, it is installed through `analysis_options.yaml`
@@ -41,14 +36,6 @@ dart analyze
 
 ## Analyzer
 
-### Language
-
-Stricter type check is enabled by default. Applying the following rules:
-
-* `strict-casts`
-* `strict-inference`
-* `strict-raw-types`
-
 ## Linter rules
 
 * :information_source: : info
@@ -63,7 +50,4 @@ Stricter type check is enabled by default. Applying the following rules:
 
 [avoid_non_null_assertion_link]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_non_null_assertion.md
 [avoid_as_link]: https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_as.md
-[freezed_link]: https://pub.dev/packages/freezed
-[mockito_link]: https://pub.dev/packages/mockito
-[dart_mappable_link]: https://pub.dev/packages/dart_mappable
-[theme_tailor_link]: https://pub.dev/packages/theme_tailor
+[analysis_server_plugin]: https://pub.dev/packages/analysis_server_plugin
