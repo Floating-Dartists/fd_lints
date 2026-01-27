@@ -53,16 +53,15 @@ class AvoidAs extends AnalysisRule {
     RuleVisitorRegistry registry,
     RuleContext context,
   ) {
-    final visitor = _Visitor(this, context);
+    final visitor = _Visitor(this);
     registry.addAsExpression(this, visitor);
   }
 }
 
 class _Visitor extends SimpleAstVisitor<void> {
-  _Visitor(this.rule, this.context);
+  _Visitor(this.rule);
 
   final AvoidAs rule;
-  final RuleContext context;
 
   @override
   void visitAsExpression(AsExpression node) => rule.reportAtNode(node);

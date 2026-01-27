@@ -59,16 +59,15 @@ class AvoidNonNullAssertion extends AnalysisRule {
     RuleVisitorRegistry registry,
     RuleContext context,
   ) {
-    final visitor = _Visitor(this, context);
+    final visitor = _Visitor(this);
     registry.addPostfixExpression(this, visitor);
   }
 }
 
 class _Visitor extends SimpleAstVisitor<void> {
-  _Visitor(this.rule, this.context);
+  _Visitor(this.rule);
 
   final AvoidNonNullAssertion rule;
-  final RuleContext context;
 
   @override
   void visitPostfixExpression(PostfixExpression node) {

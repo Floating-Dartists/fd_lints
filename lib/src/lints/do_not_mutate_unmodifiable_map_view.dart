@@ -38,17 +38,16 @@ class DoNotMutateUnmodifiableMapView extends AnalysisRule {
   @override
   void registerNodeProcessors(
       RuleVisitorRegistry registry, RuleContext context) {
-    final visitor = _Visitor(this, context);
+    final visitor = _Visitor(this);
     registry.addMethodInvocation(this, visitor);
     registry.addAssignmentExpression(this, visitor);
   }
 }
 
 class _Visitor extends SimpleAstVisitor<void> {
-  _Visitor(this.rule, this.context);
+  _Visitor(this.rule);
 
   final DoNotMutateUnmodifiableMapView rule;
-  final RuleContext context;
 
   @override
   void visitMethodInvocation(MethodInvocation node) {

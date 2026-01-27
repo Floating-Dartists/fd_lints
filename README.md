@@ -34,8 +34,6 @@ able to run:
 dart analyze
 ```
 
-## Analyzer
-
 ## Linter rules
 
 * :information_source: : info
