@@ -5,7 +5,7 @@ Do not attempt to mutate an `UnmodifiableMapView` as it will throw on runtime.
 **BAD:**
 ```dart
 void foo(UnmodifiableMapView<String, int> map) {
-  map.remove(3); // Throws UnsupportedError
+  map.remove('key'); // Throws UnsupportedError
 }
 ```
 
