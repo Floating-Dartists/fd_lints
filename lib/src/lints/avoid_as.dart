@@ -1,6 +1,9 @@
-import 'package:analyzer/error/error.dart' hide LintCode;
-import 'package:analyzer/error/listener.dart';
-import 'package:custom_lint_builder/custom_lint_builder.dart';
+import 'package:analyzer/analysis_rule/analysis_rule.dart';
+import 'package:analyzer/analysis_rule/rule_context.dart';
+import 'package:analyzer/analysis_rule/rule_visitor_registry.dart';
+import 'package:analyzer/dart/ast/ast.dart';
+import 'package:analyzer/dart/ast/visitor.dart';
+import 'package:analyzer/error/error.dart';
 
 /// {@template avoid_as}
 /// A lint that reports the use of the "as" operator.
@@ -31,27 +34,35 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 /// }
 /// ```
 /// {@endtemplate}
-class AvoidAs extends DartLintRule {
+class AvoidAs extends AnalysisRule {
   /// {@macro avoid_as}
-  AvoidAs() : super(code: _code);
+  AvoidAs() : super(name: _code.name, description: _code.problemMessage);
 
   static const _code = LintCode(
-    name: 'avoid_as',
-    problemMessage: 'Avoid using the "as" operator.',
+    'avoid_as',
+    'Avoid using the "as" operator.',
     correctionMessage: 'Use "is", "is!" or pattern matching instead.',
-    url:
-        'https://github.com/Floating-Dartists/fd_lints/blob/main/doc/avoid_as.md',
-    errorSeverity: ErrorSeverity.WARNING,
+    severity: DiagnosticSeverity.WARNING,
   );
 
   @override
-  void run(
-    CustomLintResolver resolver,
-    ErrorReporter reporter,
-    CustomLintContext context,
+  DiagnosticCode get diagnosticCode => _code;
+
+  @override
+  void registerNodeProcessors(
+    RuleVisitorRegistry registry,
+    RuleContext context,
   ) {
-    context.registry.addAsExpression((node) {
-      reporter.atNode(node, code);
-    });
+    final visitor = _Visitor(this);
+    registry.addAsExpression(this, visitor);
   }
+}
+
+class _Visitor extends SimpleAstVisitor<void> {
+  _Visitor(this.rule);
+
+  final AvoidAs rule;
+
+  @override
+  void visitAsExpression(AsExpression node) => rule.reportAtNode(node);
 }
