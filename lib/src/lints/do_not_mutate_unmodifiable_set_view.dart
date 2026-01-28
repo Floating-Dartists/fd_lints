@@ -37,7 +37,9 @@ class DoNotMutateUnmodifiableSetView extends AnalysisRule {
 
   @override
   void registerNodeProcessors(
-      RuleVisitorRegistry registry, RuleContext context) {
+    RuleVisitorRegistry registry,
+    RuleContext context,
+  ) {
     final visitor = _Visitor(this);
     registry.addMethodInvocation(this, visitor);
   }
