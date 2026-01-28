@@ -1,3 +1,15 @@
+## 3.0.0
+
+* Bump analyzer from 7.6.0 to 9.0.0
+* Refactor: Remove custom_lint and add rules by @TesteurManiak in https://github.com/Floating-Dartists/fd_lints/pull/17
+    * [do_not_mutate_unmodifiable_list_view](https://github.com/Floating-Dartists/fd_lints/blob/main/doc/do_not_mutate_unmodifiable_list_view.md)
+    * [do_not_mutate_unmodifiable_map_view](https://github.com/Floating-Dartists/fd_lints/blob/main/doc/do_not_mutate_unmodifiable_map_view.md)
+    * [do_not_mutate_unmodifiable_set_view](https://github.com/Floating-Dartists/fd_lints/blob/main/doc/do_not_mutate_unmodifiable_set_view.md)
+
+**Breaking Changes:**
+
+* Removed rules preset `dart.yaml` and `flutter.yaml`
+
 ## 2.5.0
 
 * chore(deps): bump analyzer_plugin from 0.12.0 to 0.13.0 by @dependabot in https://github.com/Floating-Dartists/fd_lints/pull/14
