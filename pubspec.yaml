@@ -17,4 +17,5 @@ dependencies:
 
 dev_dependencies:
   analyzer_testing: ^0.1.7
+  coverage: ^1.15.0
   test_reflective_loader: ^0.4.0
