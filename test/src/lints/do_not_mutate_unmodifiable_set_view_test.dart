@@ -8,14 +8,6 @@ import '../../utils/fixture_reader.dart';
 class DoNotMutateUnmodifiableSetViewTest extends AnalysisRuleTest {
   @override
   void setUp() {
-    newPackage('dart:collection')
-      ..addFile('lib/unmodifiable_set_view.dart', r'''
-class UnmodifiableSetView<E> {
-  UnmodifiableSetView(Set<E> source);
-  
-  bool add(E value) {}
-}
-''');
     rule = DoNotMutateUnmodifiableSetView();
     super.setUp();
   }
@@ -23,7 +15,7 @@ class UnmodifiableSetView<E> {
   void test_add() async {
     await assertDiagnostics(
       fixtureReader('unmodifiable_set_add.dart'),
-      [lint(54, 19)],
+      [lint(62, 11)],
     );
   }
 }
