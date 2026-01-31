@@ -1,7 +1,10 @@
-import 'dart:collection';
 import 'dart:math';
 
+abstract mixin class ListBase<E> implements List<E> {}
+
 abstract mixin class SetBase<E> implements Set<E> {}
+
+abstract class MapView<K, V> implements Map<K, V> {}
 
 abstract class UnmodifiableListView<E> extends ListBase<E> {
   factory UnmodifiableListView(Iterable<E> _source) =>
@@ -37,7 +40,7 @@ abstract class UnmodifiableListView<E> extends ListBase<E> {
   void fillRange(int start, int end, [E? fillValue]) => _throwUnmodifiable();
 }
 
-abstract class UnmodifiableMapView<K, V> {
+abstract class UnmodifiableMapView<K, V> extends MapView<K, V> {
   factory UnmodifiableMapView(Map<K, V> _source) => throw UnimplementedError();
 }
 
