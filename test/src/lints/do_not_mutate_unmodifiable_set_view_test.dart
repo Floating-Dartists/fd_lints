@@ -43,6 +43,34 @@ class DoNotMutateUnmodifiableSetViewTest extends AnalysisRuleTest
       [lint(91, 14)],
     );
   }
+
+  void test_remove_all() async {
+    await assertDiagnostics(
+      fixtureReader('unmodifiable_set_remove_all.dart'),
+      [lint(91, 22)],
+    );
+  }
+
+  void test_remove_where() async {
+    await assertDiagnostics(
+      fixtureReader('unmodifiable_set_remove_where.dart'),
+      [lint(91, 30)],
+    );
+  }
+
+  void test_retain_all() async {
+    await assertDiagnostics(
+      fixtureReader('unmodifiable_set_retain_all.dart'),
+      [lint(91, 22)],
+    );
+  }
+
+  void test_retain_where() async {
+    await assertDiagnostics(
+      fixtureReader('unmodifiable_set_retain_where.dart'),
+      [lint(91, 31)],
+    );
+  }
 }
 
 void main() {
