@@ -23,6 +23,13 @@ class DoNotMutateUnmodifiableListViewTest extends AnalysisRuleTest
     );
   }
 
+  void test_index_assign() async {
+    await assertDiagnostics(
+      fixtureReader('unmodifiable_list_index_assign.dart'),
+      [lint(92, 11)],
+    );
+  }
+
   void test_add_all() async {
     await assertDiagnostics(
       fixtureReader('unmodifiable_list_add_all.dart'),
