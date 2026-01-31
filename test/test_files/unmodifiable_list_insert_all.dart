@@ -1,0 +1,6 @@
+import 'dart:collection';
+
+void f() {
+  final view = UnmodifiableListView([1, 2, 3]);
+  view.insertAll(1, [4, 5]);
+}
