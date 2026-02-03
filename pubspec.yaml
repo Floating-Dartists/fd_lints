@@ -12,5 +12,5 @@ environment:
 
 dependencies:
   analysis_server_plugin: ^0.3.0
-  analyzer: ^9.0.0
-  analyzer_plugin: ">=0.13.0 <0.14.0"
+  analyzer: ">=9.0.0 <11.0.0"
+  analyzer_plugin: ">=0.13.0 <0.15.0"
